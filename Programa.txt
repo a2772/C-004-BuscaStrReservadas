@@ -1,0 +1,33 @@
+#include <string.h>
+
+void prefijos(char *palabra,int longi);
+void sufijos(char *palabra, int longi);
+
+int main(void)
+{
+	int i;
+	int **po1nter;
+	char palabra[100];
+	char *array[10],car;
+	printf("Introduce la cadena: \n");
+	gets(palabra);
+
+	int longi = strlen(palabra), i, j, aux;
+
+	printf("Informacion de la cadena: %s\n", palabra);
+	printf("\nPrefijos: \n");
+	prefijos(palabra,longi);
+
+void prefijos(char *palabra,int longi)
+{
+	int i, x;
+	i = x = 0;
+	while(i<longi){
+		for (x=0; x <= i; x++)
+			printf("%c", palabra[x]);
+
+		i++;
+		printf("\n");
+	}
+	printf("---------\n");
+}
